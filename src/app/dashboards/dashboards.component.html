@@ -1,0 +1,17 @@
+<div class="group row">
+  <igx-card type="outlined" [horizontal]="true" *ngFor="let item of dashboardDetailsDetails" class="card">
+    <igx-card-header>
+      <div igxCardThumbnail>
+        <igx-avatar [src]="item.AddedByImageUrl" [roundShape]="true" size="small" class="avatar"></igx-avatar>
+      </div>
+      <h3 igxCardHeaderTitle>{{ item.Title }}</h3>
+      <h5 igxCardHeaderSubtitle>{{ item.AddedBy }}</h5>
+    </igx-card-header>
+    <igx-card-content class="body-content">
+      <p class="igx-typography__body-1 text">{{ item.Desciption }}</p>
+    </igx-card-content>
+    <igx-card-media width="64px">
+      <img [src]="item.ThumbnailURL" />
+    </igx-card-media>
+  </igx-card>
+</div>
